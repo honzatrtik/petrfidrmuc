@@ -120,6 +120,32 @@ a:hover { color: var(--accent); }
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 
+/* ---- Hero: dvousloupcový layout s ilustrací ---- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 3rem;
+  align-items: center;
+}
+.hero-copy { min-width: 0; }
+.hero-copy h1 { max-width: 16ch; }
+.hero-art { min-width: 0; }
+.hero-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 30rem;
+  margin-left: auto;
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .hero-copy h1 { max-width: 20ch; }
+  .hero-art svg { max-width: 24rem; margin: 0 auto; }
+}
+@media (max-width: 460px) {
+  .hero-art { display: none; }
+}
+
 .btn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.98rem;
